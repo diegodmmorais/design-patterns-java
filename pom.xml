@@ -12,6 +12,7 @@
   <modules>
     <module>singleton-pattern</module>
     <module>factory-pattern</module>
+    <module>abstract-factory</module>
   </modules>
 
   <properties>
