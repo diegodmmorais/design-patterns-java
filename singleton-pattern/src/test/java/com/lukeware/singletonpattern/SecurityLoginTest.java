@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test;
 class SecurityLoginTest {
 
   @Test
-  @DisplayName("Login Test")
+  @DisplayName("1 - Login Test")
   void login() {
     final var instance1 = SecurityLogin.getInstance();
     final var instance2 = SecurityLogin.getInstance();

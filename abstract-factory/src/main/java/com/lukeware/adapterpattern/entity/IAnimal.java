@@ -1,4 +1,4 @@
-package com.lukeware.designpatterns.entity;
+package com.lukeware.adapterpattern.entity;
 
 
 /**

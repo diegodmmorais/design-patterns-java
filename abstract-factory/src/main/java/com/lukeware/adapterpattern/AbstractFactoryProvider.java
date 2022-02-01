@@ -1,7 +1,7 @@
-package com.lukeware.designpatterns;
+package com.lukeware.adapterpattern;
 
-import com.lukeware.designpatterns.entity.aquaticanimal.AquaticAnimalFactory;
-import com.lukeware.designpatterns.entity.landanimal.LandAnimalFactory;
+import com.lukeware.adapterpattern.entity.aquaticanimal.AquaticAnimalFactory;
+import com.lukeware.adapterpattern.entity.landanimal.LandAnimalFactory;
 
 import java.util.Objects;
 

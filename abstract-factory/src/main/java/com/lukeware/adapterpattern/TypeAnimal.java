@@ -1,4 +1,4 @@
-package com.lukeware.designpatterns;
+package com.lukeware.adapterpattern;
 
 /**
  * @author Diego Morais

@@ -32,7 +32,7 @@ class AnimalFactoryTest {
   }
 
   @Test
-  @DisplayName("3 - create animal")
+  @DisplayName("4 - create animal")
   void create() {
     final var animal = AnimalFactory.getInstance().create(TypeAnimal.CAT);
     Assertions.assertEquals("Miau Miau!", animal.toMake());

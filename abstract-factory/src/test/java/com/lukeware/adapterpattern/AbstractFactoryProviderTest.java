@@ -1,7 +1,7 @@
-package com.lukeware.designpatterns;
+package com.lukeware.adapterpattern;
 
-import com.lukeware.designpatterns.entity.aquaticanimal.TypeAnimalAquatic;
-import com.lukeware.designpatterns.entity.landanimal.TypeAnimalLand;
+import com.lukeware.adapterpattern.entity.aquaticanimal.TypeAnimalAquatic;
+import com.lukeware.adapterpattern.entity.landanimal.TypeAnimalLand;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

@@ -1,7 +1,7 @@
-package com.lukeware.designpatterns.entity.aquaticanimal;
+package com.lukeware.adapterpattern.entity.aquaticanimal;
 
 
-import com.lukeware.designpatterns.entity.IAnimal;
+import com.lukeware.adapterpattern.entity.IAnimal;
 
 /**
  * @author Diego Morais

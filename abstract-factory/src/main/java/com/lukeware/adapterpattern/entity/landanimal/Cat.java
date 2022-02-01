@@ -1,7 +1,7 @@
-package com.lukeware.designpatterns.entity.landanimal;
+package com.lukeware.adapterpattern.entity.landanimal;
 
 
-import com.lukeware.designpatterns.entity.IAnimal;
+import com.lukeware.adapterpattern.entity.IAnimal;
 
 /**
  * @author Diego Morais

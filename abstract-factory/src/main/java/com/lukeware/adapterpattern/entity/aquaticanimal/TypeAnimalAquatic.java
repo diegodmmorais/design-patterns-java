@@ -1,4 +1,4 @@
-package com.lukeware.designpatterns.entity.aquaticanimal;
+package com.lukeware.adapterpattern.entity.aquaticanimal;
 
 /**
  * @author

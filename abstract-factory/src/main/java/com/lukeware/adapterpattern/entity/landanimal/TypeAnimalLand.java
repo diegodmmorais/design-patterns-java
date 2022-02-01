@@ -1,4 +1,4 @@
-package com.lukeware.designpatterns.entity.landanimal;
+package com.lukeware.adapterpattern.entity.landanimal;
 
 /**
  * @author
