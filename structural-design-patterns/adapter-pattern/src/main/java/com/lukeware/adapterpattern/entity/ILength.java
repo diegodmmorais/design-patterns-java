@@ -1,7 +1,5 @@
 package com.lukeware.adapterpattern.entity;
 
-import com.lukeware.adapterpattern.entity.Measurement;
-
 /**
  * @author Diego Morais
  */

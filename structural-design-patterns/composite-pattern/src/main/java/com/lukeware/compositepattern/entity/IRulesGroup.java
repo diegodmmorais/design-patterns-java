@@ -1,7 +1,5 @@
 package com.lukeware.compositepattern.entity;
 
-import java.util.Set;
-
 /**
  * @author Diego Morais
  */
