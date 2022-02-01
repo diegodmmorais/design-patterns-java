@@ -15,6 +15,7 @@
     <module>abstract-factory</module>
     <module>adapter-pattern</module>
     <module>builder-pattern</module>
+    <module>composite-pattern</module>
   </modules>
 
   <properties>

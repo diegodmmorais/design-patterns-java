@@ -6,3 +6,4 @@
 - Builder Pattern: Perminte contruir objetos de forma dinâmica.
 ### Structural Design Patterns
 - Adapter Pattern: Como o nome mesmo diz, garante um adaptação de duas coisas que não se conversão.
+- Composite Pattern: Com esse padrão conseguimos tratar tipos de objetos e grupos de objetos da mesma forma, como uma árvore

@@ -30,3 +30,4 @@ target
 /adapter-pattern/adapter-pattern.iml
 
 .DS_Store
+/composite-pattern/composite-pattern.iml
