@@ -24,10 +24,6 @@ hs_err_pid*
 /design-patterns.iml
 
 target
-/.idea/
-/design-patterns-java.iml
-/abstract-factory/abstract-factory.iml
-/adapter-pattern/adapter-pattern.iml
-
+.idea
 .DS_Store
-/composite-pattern/composite-pattern.iml
+*.iml
