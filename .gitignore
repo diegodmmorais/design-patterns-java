@@ -28,3 +28,5 @@ target
 /design-patterns-java.iml
 /abstract-factory/abstract-factory.iml
 /adapter-pattern/adapter-pattern.iml
+
+.DS_Store
