@@ -10,7 +10,7 @@
 
   <modelVersion>4.0.0</modelVersion>
   <version>0.1.0-SNAPSHOT</version>
-  <groupId>com.lukeware.abstractfactory</groupId>
+  <groupId>com.lukeware.abstract.factory</groupId>
   <artifactId>abstract-factory</artifactId>
 
 </project>

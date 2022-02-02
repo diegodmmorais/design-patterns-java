@@ -10,7 +10,7 @@
 
   <version>0.1.0-SNAPSHOT</version>
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.lukeware.builderpattern</groupId>
+  <groupId>com.lukeware.builder</groupId>
   <artifactId>builder-pattern</artifactId>
 
 </project>

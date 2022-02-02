@@ -10,7 +10,7 @@
 
   <version>0.1.0-SNAPSHOT</version>
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.lukeware.compositepattern</groupId>
+  <groupId>com.lukeware.composite</groupId>
   <artifactId>composite-pattern</artifactId>
 
 </project>

@@ -17,6 +17,7 @@
   <modules>
     <module>adapter-pattern</module>
     <module>composite-pattern</module>
+    <module>decorator-pattern</module>
   </modules>
 
 </project>

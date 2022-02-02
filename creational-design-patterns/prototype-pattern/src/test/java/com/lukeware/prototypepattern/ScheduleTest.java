@@ -1,6 +1,6 @@
 package com.lukeware.prototypepattern;
 
-import com.lukeware.prototypepattern.entity.ScheduleBuilder;
+import com.lukeware.prototype.entity.ScheduleBuilder;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
