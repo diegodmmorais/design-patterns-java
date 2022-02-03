@@ -5,16 +5,16 @@
 - :white_check_mark: [Factory Pattern](https://github.com/diegodmmorais/design-patterns-java/issues/2)
 - :white_check_mark: [Abstract Factory Pattern](https://github.com/diegodmmorais/design-patterns-java/issues/3)
 - :white_check_mark: [Builder Pattern](https://github.com/diegodmmorais/design-patterns-java/issues/5)
-- :white_large_square: [Prototype Pattern]()
+- :white_large_square: [Prototype Pattern](https://github.com/diegodmmorais/design-patterns-java/issues/8)
 
 ### Structural Design Patterns
 - :white_check_mark: [Adapter Pattern](https://github.com/diegodmmorais/design-patterns-java/issues/4)
 - :white_check_mark: [Composite Pattern](https://github.com/diegodmmorais/design-patterns-java/issues/6)
 - :white_check_mark: [Proxy Pattern](https://github.com/diegodmmorais/design-patterns-java/issues/7)
-- :white_large_square: [Flyweight Pattern]()
+- :white_large_square: [Flyweight Pattern](https://github.com/diegodmmorais/design-patterns-java/issues/7)
 - :white_large_square: [Facade Pattern]()
 - :white_large_square: [Bridge Pattern]()
-- :white_large_square: [Decorator Pattern]()
+- :white_large_square: [Decorator Pattern](https://github.com/diegodmmorais/design-patterns-java/issues/9)
 
 ### Behavioral Design Patterns
 - :white_large_square: [Template Method Pattern]()
