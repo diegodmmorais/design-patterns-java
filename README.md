@@ -1,6 +1,6 @@
 ## Botando em prática Design Patterns
 ###Creational Design Patterns
-- Singleton Pattern 
+- [x] [Singleton Pattern](https://github.com/diegodmmorais/design-patterns-java/issues/1) :+1:
 - Factory Pattern
 - Abstract Factory Pattern
 - Builder Pattern
