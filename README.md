@@ -1,11 +1,31 @@
 ## Botando em prática Design Patterns
-### Creational Design Patterns
-- Singleton Pattern: Garante que haverá apenas uma instancia de uma classe.
-- Factory Pattern: Garante a criação de novos objetos atráves de métodos, sem que saibam que classe está sendo estanciada.
-- Abstract Pattern: Garante que você possa utilizar várias fábricas de criação de novo objetos de forma abstrata
-- Builder Pattern: Perminte contruir objetos de forma dinâmica.
-- Prototype Pattern: Permite a prossibilidade de criar um clone de um objeto mesmo não tendo acesso oas atributos.
-### Structural Design Patterns
-- Adapter Pattern: Como o nome mesmo diz, garante um adaptação de duas coisas que não se conversão.
-- Composite Pattern: Com esse padrão conseguimos tratar tipos de objetos e grupos de objetos da mesma forma, como uma árvore
-- Decorator Pattern:
+###Creational Design Patterns
+- Singleton Pattern
+- Factory Pattern
+- Abstract Factory Pattern
+- Builder Pattern
+- Prototype Pattern
+###Structural Design Patterns
+- Adapter Pattern
+- Composite Pattern
+- Proxy Pattern
+- Flyweight Pattern
+- Facade Pattern
+- Bridge Pattern
+- Decorator Pattern
+- Behavioral Design Patterns
+- Template Method Pattern
+- Mediator Pattern
+- Chain of Responsibility Pattern
+- Observer Pattern
+- Strategy Pattern
+- Command Pattern
+- State Pattern
+- Visitor Pattern
+- Interpreter Pattern
+- Iterator Pattern
+- Memento Pattern
+###Miscellaneous Design Patterns
+- DAO Design Pattern
+- Dependency Injection Pattern
+- MVC Pattern
