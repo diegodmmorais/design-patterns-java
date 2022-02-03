@@ -1,6 +1,6 @@
 ## Botando em prática Design Patterns
 ###Creational Design Patterns
-- Singleton Pattern
+- Singleton Pattern 
 - Factory Pattern
 - Abstract Factory Pattern
 - Builder Pattern
@@ -8,12 +8,12 @@
 ###Structural Design Patterns
 - Adapter Pattern
 - Composite Pattern
-- Proxy Pattern
+- [ ] Proxy Pattern #7
 - Flyweight Pattern
 - Facade Pattern
 - Bridge Pattern
 - Decorator Pattern
-- Behavioral Design Patterns
+###Behavioral Design Patterns
 - Template Method Pattern
 - Mediator Pattern
 - Chain of Responsibility Pattern
