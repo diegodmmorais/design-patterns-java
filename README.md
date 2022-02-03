@@ -5,7 +5,7 @@
 - :white_check_mark: [Factory Pattern](https://github.com/diegodmmorais/design-patterns-java/issues/2)
 - :white_check_mark: [Abstract Factory Pattern](https://github.com/diegodmmorais/design-patterns-java/issues/3)
 - :white_check_mark: [Builder Pattern](https://github.com/diegodmmorais/design-patterns-java/issues/5)
-- :white_large_square: [Prototype Pattern](https://github.com/diegodmmorais/design-patterns-java/issues/8)
+- :white_check_mark: [Prototype Pattern](https://github.com/diegodmmorais/design-patterns-java/issues/8)
 
 ### Structural Design Patterns
 - :white_check_mark: [Adapter Pattern](https://github.com/diegodmmorais/design-patterns-java/issues/4)
