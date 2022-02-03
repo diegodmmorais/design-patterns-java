@@ -8,7 +8,7 @@
 ###Structural Design Patterns
 - Adapter Pattern
 - Composite Pattern
-- [ ] Proxy Pattern #7
+- [ ] [Proxy Pattern](https://github.com/diegodmmorais/design-patterns-java/issues/7) #7
 - Flyweight Pattern
 - Facade Pattern
 - Bridge Pattern
