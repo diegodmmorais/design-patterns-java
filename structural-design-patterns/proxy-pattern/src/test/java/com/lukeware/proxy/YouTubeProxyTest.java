@@ -29,6 +29,7 @@ class YouTubeProxyTest {
     final var youtube = YouTubeFactory.getInstance().create();
 
     final YouTubeProxy youTubeProxy = new YouTubeProxy(youtube);
+    youTubeProxy.urls().clear();
 
     Assertions.assertDoesNotThrow(() -> youTubeProxy.download("www1.youtube.com"));
     Assertions.assertDoesNotThrow(() -> youTubeProxy.download("www2.youtube.com"));
