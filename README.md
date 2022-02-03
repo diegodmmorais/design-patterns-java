@@ -1,14 +1,14 @@
 ## Botando em prática Design Patterns
 ###Creational Design Patterns
 - :white_check_mark: [Singleton Pattern](https://github.com/diegodmmorais/design-patterns-java/issues/1)
-- Factory Pattern
-- Abstract Factory Pattern
-- Builder Pattern
+- :white_check_mark: [Factory Pattern](https://github.com/diegodmmorais/design-patterns-java/issues/2)
+- :white_check_mark: [Abstract Factory Pattern](https://github.com/diegodmmorais/design-patterns-java/issues/3)
+- :white_check_mark: [Builder Pattern](https://github.com/diegodmmorais/design-patterns-java/issues/5)
 - Prototype Pattern
 ###Structural Design Patterns
-- Adapter Pattern
-- Composite Pattern
-- :white_check_mark: [Proxy Pattern](https://github.com/diegodmmorais/design-patterns-java/issues/7) #7
+- :white_check_mark: [Adapter Pattern](https://github.com/diegodmmorais/design-patterns-java/issues/4)
+- :white_check_mark: [Composite Pattern](https://github.com/diegodmmorais/design-patterns-java/issues/6)
+- :white_check_mark: [Proxy Pattern](https://github.com/diegodmmorais/design-patterns-java/issues/7)
 - Flyweight Pattern
 - Facade Pattern
 - Bridge Pattern
