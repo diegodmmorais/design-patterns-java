@@ -12,7 +12,7 @@
 - :white_check_mark: [Composite Pattern](https://github.com/diegodmmorais/design-patterns-java/issues/6)
 - :white_check_mark: [Proxy Pattern](https://github.com/diegodmmorais/design-patterns-java/issues/7)
 - :white_check_mark: [Decorator Pattern](https://github.com/diegodmmorais/design-patterns-java/issues/9)
-- :white_large_square: [Flyweight Pattern](https://github.com/diegodmmorais/design-patterns-java/issues/7)
+- :white_check_mark: [Flyweight Pattern](https://github.com/diegodmmorais/design-patterns-java/issues/7)
 - :white_large_square: [Facade Pattern]()
 - :white_large_square: [Bridge Pattern]()
 

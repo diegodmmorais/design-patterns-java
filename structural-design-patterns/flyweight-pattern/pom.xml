@@ -10,16 +10,7 @@
 
   <version>0.1.0-SNAPSHOT</version>
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.lukeware.structural.design.patterns</groupId>
-  <artifactId>structural-design-patterns</artifactId>
-  <packaging>pom</packaging>
-
-  <modules>
-    <module>adapter-pattern</module>
-    <module>composite-pattern</module>
-    <module>decorator-pattern</module>
-    <module>proxy-pattern</module>
-    <module>flyweight-pattern</module>
-  </modules>
+  <groupId>com.lukeware.flyweight</groupId>
+  <artifactId>flyweight-pattern</artifactId>
 
 </project>
