@@ -1,18 +1,18 @@
 ## Botando em prática Design Patterns
 ### Creational Design Patterns
 
-- :white_check_mark: [Singleton Pattern](https://github.com/diegodmmorais/design-patterns-java/issues/1)
-- :white_check_mark: [Factory Pattern](https://github.com/diegodmmorais/design-patterns-java/issues/2)
-- :white_check_mark: [Abstract Factory Pattern](https://github.com/diegodmmorais/design-patterns-java/issues/3)
-- :white_check_mark: [Builder Pattern](https://github.com/diegodmmorais/design-patterns-java/issues/5)
-- :white_check_mark: [Prototype Pattern](https://github.com/diegodmmorais/design-patterns-java/issues/8)
+- :white_check_mark: [Singleton Pattern](https://www.journaldev.com/1377/java-singleton-design-pattern-best-practices-examples)
+- :white_check_mark: [Factory Pattern](https://www.journaldev.com/1392/factory-design-pattern-in-java)
+- :white_check_mark: [Abstract Factory Pattern](https://www.journaldev.com/1418/abstract-factory-design-pattern-in-java)
+- :white_check_mark: [Builder Pattern](https://www.journaldev.com/1425/builder-design-pattern-in-java)
+- :white_check_mark: [Prototype Pattern](https://www.journaldev.com/1440/prototype-design-pattern-in-java)
 
 ### Structural Design Patterns
-- :white_check_mark: [Adapter Pattern](https://github.com/diegodmmorais/design-patterns-java/issues/4)
-- :white_check_mark: [Composite Pattern](https://github.com/diegodmmorais/design-patterns-java/issues/6)
-- :white_check_mark: [Proxy Pattern](https://github.com/diegodmmorais/design-patterns-java/issues/7)
-- :white_check_mark: [Decorator Pattern](https://github.com/diegodmmorais/design-patterns-java/issues/9)
-- :white_check_mark: [Flyweight Pattern](https://github.com/diegodmmorais/design-patterns-java/issues/7)
+- :white_check_mark: [Adapter Pattern](https://www.journaldev.com/1487/adapter-design-pattern-java)
+- :white_check_mark: [Composite Pattern](https://www.journaldev.com/1535/composite-design-pattern-in-java)
+- :white_check_mark: [Proxy Pattern](https://www.journaldev.com/1572/proxy-design-pattern)
+- :white_check_mark: [Decorator Pattern](https://www.journaldev.com/1540/decorator-design-pattern-in-java-example)
+- :white_check_mark: [Flyweight Pattern](https://www.journaldev.com/1562/flyweight-design-pattern-java)
 - :white_large_square: [Facade Pattern]()
 - :white_large_square: [Bridge Pattern]()
 
