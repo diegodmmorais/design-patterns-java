@@ -21,11 +21,13 @@ class IDeliveryFlyweightTest {
     final var delivery = DeliveryFactory.getInstance().delivery();
 
     delivery.makeLocation(locationData).delivery("Diego Morais", "393");
+    delivery.makeLocation(locationData).delivery("Mary Jane", "399");
     delivery.makeLocation(locationData).delivery("Jonh Davi", "758");
     delivery.makeLocation(locationData2).delivery("Jonh Davi", "758");
 
     Assertions.assertFalse(delivery.getLocations().entrySet().isEmpty(), "Location is not empty");
     Assertions.assertTrue(delivery.getLocations().entrySet().stream().findFirst().isPresent(), "Location is present");
+    Assertions.assertEquals(2, delivery.getLocations().size(), "Location is present two");
 
   }
 
