@@ -20,6 +20,7 @@
     <module>decorator-pattern</module>
     <module>proxy-pattern</module>
     <module>flyweight-pattern</module>
+    <module>facade-pattern</module>
   </modules>
 
 </project>
