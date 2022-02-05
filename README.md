@@ -13,8 +13,8 @@
 - :white_check_mark: [Proxy Pattern](https://www.journaldev.com/1572/proxy-design-pattern)
 - :white_check_mark: [Decorator Pattern](https://www.journaldev.com/1540/decorator-design-pattern-in-java-example)
 - :white_check_mark: [Flyweight Pattern](https://www.journaldev.com/1562/flyweight-design-pattern-java)
-- :white_large_square: [Facade Pattern](https://www.journaldev.com/1557/facade-design-pattern-in-java)
-- :white_large_square: [Bridge Pattern](https://refactoring.guru/pt-br/design-patterns/bridge)
+- :white_check_mark: [Facade Pattern](https://www.journaldev.com/1557/facade-design-pattern-in-java)
+- :white_check_mark: [Bridge Pattern](https://refactoring.guru/pt-br/design-patterns/bridge)
 
 ### Behavioral Design Patterns
 - :white_large_square: [Template Method Pattern]()
