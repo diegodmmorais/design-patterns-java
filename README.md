@@ -14,22 +14,22 @@
 - :white_check_mark: [Decorator Pattern](https://www.journaldev.com/1540/decorator-design-pattern-in-java-example)
 - :white_check_mark: [Flyweight Pattern](https://www.journaldev.com/1562/flyweight-design-pattern-java)
 - :white_large_square: [Facade Pattern](https://www.journaldev.com/1557/facade-design-pattern-in-java)
-- :white_large_square: [Bridge Pattern]()
+- :white_large_square: [Bridge Pattern](https://refactoring.guru/pt-br/design-patterns/bridge)
 
 ### Behavioral Design Patterns
 - :white_large_square: [Template Method Pattern]()
-- :white_large_square: Mediator Pattern
-- :white_large_square: Chain of Responsibility Pattern
-- :white_large_square: Observer Pattern
-- :white_large_square: Strategy Pattern
-- :white_large_square: Command Pattern
-- :white_large_square: State Pattern
-- :white_large_square: Visitor Pattern
-- :white_large_square: Interpreter Pattern
-- :white_large_square: Iterator Pattern
-- :white_large_square: Memento Pattern
+- :white_large_square: [Mediator Pattern]()
+- :white_large_square: [Chain of Responsibility Pattern]()
+- :white_large_square: [Observer Pattern]()
+- :white_large_square: [Strategy Pattern]()
+- :white_large_square: [Command Pattern]()
+- :white_large_square: [State Pattern]()
+- :white_large_square: [Visitor Pattern]()
+- :white_large_square: [Interpreter Pattern]()
+- :white_large_square: [Iterator Pattern]()
+- :white_large_square: [Memento Pattern]()
 
 ### Miscellaneous Design Patterns
-- :white_large_square: DAO Design Pattern
-- :white_large_square: Dependency Injection Pattern
-- :white_large_square: MVC Pattern
+- :white_large_square: [DAO Design Pattern]()
+- :white_large_square: [Dependency Injection Pattern]()
+- :white_large_square: [MVC Pattern]()

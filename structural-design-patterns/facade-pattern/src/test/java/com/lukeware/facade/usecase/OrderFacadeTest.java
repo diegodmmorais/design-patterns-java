@@ -37,6 +37,7 @@ class OrderFacadeTest {
     items.add(new ItemsRequest("123789456", 10.0));
     items.add(new ItemsRequest("456123789", 95.58));
     items.add(new ItemsRequest("789123456", 25.18));
+
     final var orderRequest = new OrderRequest("Jonh", items);
 
     Assertions.assertDoesNotThrow(() -> orderFacade.save(orderRequest));
