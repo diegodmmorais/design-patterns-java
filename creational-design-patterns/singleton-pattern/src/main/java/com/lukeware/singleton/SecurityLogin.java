@@ -17,18 +17,14 @@ final class SecurityLogin {
   }
 
   public static SecurityLogin getInstance() {
-    if (isNull(SecurityLogin.instance)) {
+    if (Objects.isNull(SecurityLogin.instance)) {
       synchronized (SecurityLogin.class) {
-        if (isNull(SecurityLogin.instance)) {
+        if (Objects.isNull(SecurityLogin.instance)) {
           instance = new SecurityLogin();
         }
       }
     }
     return instance;
-  }
-
-  private static <T> boolean isNull(T t) {
-    return Objects.isNull(t);
   }
 
   public void login(String username, String password) {
