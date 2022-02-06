@@ -7,27 +7,16 @@ import java.util.Objects;
 /**
  * @author
  */
-final record CompanyInteractor() implements IComapnyInputBoundary {
-
-  private static CompanyInteractor instance;
-
-  public static CompanyInteractor getInstance() {
-    if (Objects.isNull(instance)) {
-      synchronized (CompanyInteractor.class) {
-        if (Objects.isNull(instance)) {
-          instance = new CompanyInteractor();
-        }
-      }
-    }
-    return instance;
-  }
+final record CompanyInteractor(IComapny comapny) implements IRuleCompany {
 
   @Override
-  public void execute(IComapny comapny) {
-    System.out.println("Running rules company");
+  public void execute() {
+    System.out.println("\n----------------------------------------");
+    System.out.println("| Running rules company");
     if (Objects.nonNull(comapny.identifierDocument())) {
-      System.out.println("Identifier code validated");
+      System.out.println("| Identifier document validated");
     }
-    System.out.println(comapny);
+    System.out.println("| " + comapny);
+    System.out.println("----------------------------------------\n");
   }
 }

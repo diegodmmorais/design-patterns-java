@@ -7,28 +7,17 @@ import java.util.Objects;
 /**
  * @author
  */
-final record RepresentativeInteractor() implements IRepresentantiveInputBoundary {
-
-  private static RepresentativeInteractor instance;
-
-  public static RepresentativeInteractor getInstance() {
-    if (Objects.isNull(instance)) {
-      synchronized (RepresentativeInteractor.class) {
-        if (Objects.isNull(instance)) {
-          instance = new RepresentativeInteractor();
-        }
-      }
-    }
-    return instance;
-  }
+final record RepresentativeInteractor(IRepresentative representative) implements IRuleRepresentative {
 
   @Override
-  public void execute(IRepresentative representative) {
-    System.out.println("Running rules representative");
+  public void execute() {
+    System.out.println("----------------------------------------");
+    System.out.println("| Running rules representative");
     if (Objects.nonNull(representative.identifierDocument())) {
-      System.out.println("Identifier code validated");
+      System.out.println("| Identifier document validated");
     }
-    System.out.println(representative);
-
+    System.out.println("| " + representative);
+    System.out.println("----------------------------------------\n");
   }
+
 }
