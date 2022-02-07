@@ -17,11 +17,13 @@ final class RepresentativeInteractor extends AbstractRuleInteractor implements I
 
   private final IRepresentative representative;
   private final RuleEventManager eventManager;
+  private final String identifierProposal;
 
-  RepresentativeInteractor(IRepresentative representative) {
+  RepresentativeInteractor(String identifierProposal, IRepresentative representative) {
     super(new LinkedHashSet<>());
     this.representative = representative;
     this.eventManager = RuleEventManager.getInstance();
+    this.identifierProposal = identifierProposal;
 
   }
 
@@ -34,7 +36,7 @@ final class RepresentativeInteractor extends AbstractRuleInteractor implements I
       actions().add(ActionBuilder.builder().action("VALIDATE_IDENTIFIER_DOCUMENT")
                                  .type(TypeAction.GO_TO_AGENCY)
                                  .build());
-      eventManager.notify(RuleType.REPRESENTATIVE, this.actions());
+      eventManager.notify(identifierProposal, this.actions());
     }
     System.out.println("| " + representative);
     System.out.println("----------------------------------------\n");

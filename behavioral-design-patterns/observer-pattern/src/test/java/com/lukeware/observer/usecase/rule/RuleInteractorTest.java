@@ -1,8 +1,10 @@
 package com.lukeware.observer.usecase.rule;
 
+import com.lukeware.observer.entity.action.TypeAction;
 import com.lukeware.observer.entity.company.CompanyBuilder;
 import com.lukeware.observer.entity.proposal.ProposalBuilder;
 import com.lukeware.observer.entity.representative.RepresentativeBuilder;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -30,11 +32,16 @@ class RuleInteractorTest {
                                                     .lastName("Dave")
                                                     .build();
     final var proposal = ProposalBuilder.builder()
+                                        .identifierCode("99991111222333")
                                         .comapny(comapny)
                                         .representative(representative)
                                         .build();
 
-    ruleInteractor.runBusinessRulesFour(proposal);
+    final var action = ruleInteractor.runBusinessRulesFour(proposal);
+
+    Assertions.assertNotNull(action);
+    Assertions.assertFalse(action.isEmpty());
+    Assertions.assertEquals(TypeAction.GO_TO_AGENCY, action.stream().findFirst().get().type());
 
   }
 

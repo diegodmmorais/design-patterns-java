@@ -28,8 +28,8 @@ class IRuleRunnerTest {
     final var companyFactory = AbstractFactoryProvider.getInstance().create(FactoryType.COMPANY);
     final var representativeFactory = AbstractFactoryProvider.getInstance().create(FactoryType.REPRESENTATIVE);
 
-    final var ruleCompany = (IRuleRunner) companyFactory.create(company);
-    final var ruleRepresentative = (IRuleRunner) representativeFactory.create(representative);
+    final var ruleCompany = (IRuleRunner) companyFactory.create("1234", company);
+    final var ruleRepresentative = (IRuleRunner) representativeFactory.create("1234", representative);
 
     motorFour.add(ruleCompany);
     motorFour.add(ruleRepresentative);

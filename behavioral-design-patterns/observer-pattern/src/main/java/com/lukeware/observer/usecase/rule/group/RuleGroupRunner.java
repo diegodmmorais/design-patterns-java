@@ -5,6 +5,9 @@ import com.lukeware.observer.usecase.IRuleRunner;
 
 import java.util.LinkedHashSet;
 import java.util.Set;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutionException;
+import java.util.stream.Collectors;
 
 /**
  * @author diegomorais
@@ -35,7 +38,19 @@ class RuleGroupRunner extends AbstractRuleInteractor implements IRuleGroupRunner
   @Override
   public void executeMulti() {
 
+    final var futures = rules.stream()
+                             .map(it -> CompletableFuture.runAsync(() -> it.execute()))
+                             .collect(Collectors.toSet());
 
+    CompletableFuture<Void> all = CompletableFuture.allOf(futures.toArray(new CompletableFuture[futures.size()]));
+
+    try {
+      all.get();
+    } catch (InterruptedException e) {
+      e.printStackTrace();
+    } catch (ExecutionException e) {
+      e.printStackTrace();
+    }
 
   }
 }

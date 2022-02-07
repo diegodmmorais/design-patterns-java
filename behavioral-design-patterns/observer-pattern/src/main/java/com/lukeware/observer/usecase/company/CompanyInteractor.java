@@ -1,7 +1,6 @@
 package com.lukeware.observer.usecase.company;
 
 import com.lukeware.observer.entity.action.ActionBuilder;
-import com.lukeware.observer.entity.action.IAction;
 import com.lukeware.observer.entity.action.TypeAction;
 import com.lukeware.observer.entity.company.IComapny;
 import com.lukeware.observer.usecase.AbstractRuleInteractor;
@@ -10,7 +9,6 @@ import com.lukeware.observer.usecase.rule.event.RuleEventManager;
 
 import java.util.LinkedHashSet;
 import java.util.Objects;
-import java.util.Set;
 
 /**
  * @author
@@ -19,12 +17,14 @@ final class CompanyInteractor extends AbstractRuleInteractor implements IRuleCom
 
   private final IComapny comapny;
   private final RuleEventManager eventManager;
+  private final String identifierProposal;
 
 
-  CompanyInteractor(IComapny comapny) {
+  CompanyInteractor(String identifierProposal, IComapny comapny) {
     super(new LinkedHashSet<>());
     this.comapny = comapny;
     this.eventManager = RuleEventManager.getInstance();
+    this.identifierProposal = identifierProposal;
   }
 
   @Override
@@ -34,7 +34,7 @@ final class CompanyInteractor extends AbstractRuleInteractor implements IRuleCom
     if (Objects.nonNull(comapny.identifierDocument())) {
       System.out.println("| Identifier document validated");
       actions().add(ActionBuilder.builder().action("VALIDATE_IDENTIFIER_DOCUMENT").type(TypeAction.APPROVED).build());
-      eventManager.notify(RuleType.COMPANY, this.actions());
+      eventManager.notify(identifierProposal, this.actions());
     }
     System.out.println("| " + comapny);
     System.out.println("----------------------------------------\n");

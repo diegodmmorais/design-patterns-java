@@ -1,7 +1,10 @@
 package com.lukeware.observer.controller;
 
+import com.lukeware.observer.entity.action.IAction;
 import com.lukeware.observer.entity.proposal.IProposal;
 import com.lukeware.observer.usecase.rule.IRuleInteractor;
+
+import java.util.Set;
 
 /**
  * @author Diego Morais
@@ -9,7 +12,7 @@ import com.lukeware.observer.usecase.rule.IRuleInteractor;
 public final record RuleController(IRuleInteractor ruleInteractor) implements IRuleController {
 
   @Override
-  public boolean runBusinessRulesFour(IProposal proposal) {
+  public Set<IAction> runBusinessRulesFour(IProposal proposal) {
     return this.ruleInteractor.runBusinessRulesFour(proposal);
   }
 

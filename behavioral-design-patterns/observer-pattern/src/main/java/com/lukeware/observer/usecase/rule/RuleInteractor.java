@@ -1,56 +1,66 @@
 package com.lukeware.observer.usecase.rule;
 
 import com.lukeware.observer.entity.action.IAction;
+import com.lukeware.observer.entity.action.TypeAction;
 import com.lukeware.observer.entity.proposal.IProposal;
 import com.lukeware.observer.usecase.AbstractFactoryProvider;
 import com.lukeware.observer.usecase.FactoryType;
 import com.lukeware.observer.usecase.IRuleRunner;
-import com.lukeware.observer.usecase.RuleType;
 import com.lukeware.observer.usecase.rule.event.EventListenRules;
 import com.lukeware.observer.usecase.rule.event.RuleEventManager;
 import com.lukeware.observer.usecase.rule.group.RuleGroupBuilder;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.LinkedHashSet;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 /**
  * @author diegomorais
  */
 final class RuleInteractor implements IRuleInteractor, EventListenRules {
 
-  private Map<RuleType, Set<IAction>> actions = new LinkedHashMap<>();
+  private Set<IAction> rulesRunning = new LinkedHashSet<>();
 
   @Override
-  public boolean runBusinessRulesFour(IProposal proposal) {
+  public Set<IAction> runBusinessRulesFour(IProposal proposal) {
+
+    final var identifierProposal = proposal.identifierCode();
 
     final var eventManager = RuleEventManager.getInstance();
-    eventManager.subscribe(this, RuleType.COMPANY, RuleType.REPRESENTATIVE);
+    eventManager.subscribe(identifierProposal, this);
 
     final var companyFactory = AbstractFactoryProvider.getInstance().create(FactoryType.COMPANY);
-    final var companyRule = (IRuleRunner) companyFactory.create(proposal.comapny());
+    final var representantiveFactory = AbstractFactoryProvider.getInstance().create(FactoryType.REPRESENTATIVE);
 
-    final var representantiveFactory = AbstractFactoryProvider.getInstance().create(FactoryType.REPRESENTATIVE );
-    final var representantiveRule = (IRuleRunner) representantiveFactory.create(proposal.representative());
+    final var companyRule = (IRuleRunner) companyFactory.create(identifierProposal, proposal.comapny());
+    final var representantiveRule = (IRuleRunner) representantiveFactory.create(identifierProposal, proposal.representative());
 
-    final var groupRunnerRule = RuleGroupBuilder.builder().build();
-    groupRunnerRule.add(companyRule);
-    groupRunnerRule.add(representantiveRule);
+    final var ruleMotoFour = RuleGroupBuilder.builder().build();
+    ruleMotoFour.add(companyRule);
+    ruleMotoFour.add(representantiveRule);
 
-    groupRunnerRule.executeMulti();
+    ruleMotoFour.execute();
+    eventManager.unSubscribe(identifierProposal);
 
-    System.out.println("| " + this.actions);
+    final var reaprover = getAction(TypeAction.REAPPROVED);
+    if (!reaprover.isEmpty()) {
+      return reaprover;
+    }
 
-    return false;
+    final var goToAgency = getAction(TypeAction.GO_TO_AGENCY);
+    if (!goToAgency.isEmpty()) {
+      return goToAgency;
+    }
+
+    return getAction(TypeAction.APPROVED);
   }
 
-  private boolean isValid() {
-
-    return false;
+  private Set<IAction> getAction(TypeAction type) {
+    return this.rulesRunning.stream().filter(it -> type.equals(it.type())).collect(Collectors.toSet());
   }
 
   @Override
-  public void update(RuleType type, Set<IAction> actions) {
-    this.actions.put(type, actions);
+  public void update(Set<IAction> actions) {
+    this.rulesRunning.addAll(actions);
   }
 }

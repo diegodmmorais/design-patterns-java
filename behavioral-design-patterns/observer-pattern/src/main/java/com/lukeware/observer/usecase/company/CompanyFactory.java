@@ -28,8 +28,8 @@ public final class CompanyFactory implements IRuleFactory<IComapny, IRuleCompany
   }
 
   @Override
-  public IRuleCompany create(IComapny comapny) {
-    return new CompanyInteractor(comapny);
+  public IRuleCompany create(String identifierProposal, IComapny comapny) {
+    return new CompanyInteractor(identifierProposal, comapny);
   }
 
 }

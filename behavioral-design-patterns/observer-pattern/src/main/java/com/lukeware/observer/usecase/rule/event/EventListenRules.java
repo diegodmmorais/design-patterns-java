@@ -9,5 +9,5 @@ import java.util.Set;
  * @author Diego Morais
  */
 public interface EventListenRules {
-  void update(RuleType type, Set<IAction> actions);
+  void update(Set<IAction> actions);
 }

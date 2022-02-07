@@ -29,8 +29,8 @@ public final class RepresentativeFactory implements IRuleFactory<IRepresentative
   }
 
   @Override
-  public IRuleRepresentative create(IRepresentative representative) {
-    return new RepresentativeInteractor(representative);
+  public IRuleRepresentative create(String identifierProposal, IRepresentative representative) {
+    return new RepresentativeInteractor(identifierProposal, representative);
   }
 
 }

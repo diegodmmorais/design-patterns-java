@@ -2,13 +2,11 @@ package com.lukeware.observer.usecase.rule.event;
 
 import com.lukeware.observer.entity.action.IAction;
 import com.lukeware.observer.usecase.RuleType;
+import com.lukeware.observer.usecase.rule.RuleDsRequest;
 
-import java.util.Collections;
 import java.util.LinkedHashSet;
-import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
-import java.util.stream.Stream;
 
 /**
  * @author Diego Morais
@@ -17,7 +15,7 @@ public final class RuleEventManager {
 
   private static RuleEventManager instance;
 
-  private Set<Map<RuleType, EventListenRules>> listeners = new LinkedHashSet<>();
+  private Set<RuleDsRequest> listeners = new LinkedHashSet<>();
 
   private RuleEventManager() {
     super();
@@ -34,35 +32,22 @@ public final class RuleEventManager {
     return instance;
   }
 
-  public void subscribe(EventListenRules listener, RuleType... type) {
-
-    Stream.of(type).forEach(ruleType -> {
-      final var optListener = listeners.stream()
-                                       .filter(event -> event.containsKey(ruleType))
-                                       .findFirst();
-      if (optListener.isPresent()) {
-        optListener.get().put(ruleType, listener);
-      } else {
-        listeners.add(Collections.singletonMap(ruleType, listener));
-      }
-    });
-
+  public void subscribe(String identifierCode, EventListenRules eventList) {
+    listeners.add(new RuleDsRequest(identifierCode, eventList));
   }
 
-  public void unSubscribe(RuleType type, EventListenRules listener) {
+  public void unSubscribe(String identifierCode) {
     final var optListener = listeners.stream()
-                                     .filter(event -> event.containsKey(type))
+                                     .filter(event -> event.identifierCode().equals(identifierCode))
                                      .findFirst();
     if (optListener.isPresent()) {
-      listeners.remove(Collections.singletonMap(type, listener));
+      listeners.remove(optListener.get());
     }
   }
 
-  public void notify(RuleType type, Set<IAction> actions) {
-    listeners.forEach(rules -> rules.entrySet()
-                                    .stream()
-                                    .filter(event -> event.getKey().equals(type))
-                                    .forEach(event -> event.getValue().update(type, actions)));
+  public void notify(String identifierCode, Set<IAction> actions) {
+    listeners.stream().filter(item-> item.identifierCode().equals(identifierCode))
+             .forEach(rule -> rule.eventListenRules().update(actions));
   }
 
 }
