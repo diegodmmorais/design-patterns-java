@@ -15,11 +15,11 @@ public interface IDevice {
 
   void turnVolumeDown();
 
-  void setChannel(int channel);
-
   int getVolume();
 
   int getChannel();
+
+  void setChannel(int channel);
 
   void printStatus();
 }

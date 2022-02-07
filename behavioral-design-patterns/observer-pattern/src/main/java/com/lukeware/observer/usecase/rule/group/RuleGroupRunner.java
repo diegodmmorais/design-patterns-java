@@ -31,26 +31,23 @@ class RuleGroupRunner extends AbstractRuleInteractor implements IRuleGroupRunner
   }
 
   @Override
+  public void addAll(Set<IRuleRunner> ruleRunner) {
+    ruleRunner.forEach(this::add);
+  }
+
+  @Override
   public void remove(IRuleRunner rule) {
     rules.remove(rule);
   }
 
   @Override
-  public void executeMulti() {
-
+  public void executeMulti() throws ExecutionException, InterruptedException {
     final var futures = rules.stream()
                              .map(it -> CompletableFuture.runAsync(() -> it.execute()))
                              .collect(Collectors.toSet());
 
-    CompletableFuture<Void> all = CompletableFuture.allOf(futures.toArray(new CompletableFuture[futures.size()]));
-
-    try {
-      all.get();
-    } catch (InterruptedException e) {
-      e.printStackTrace();
-    } catch (ExecutionException e) {
-      e.printStackTrace();
-    }
-
+    CompletableFuture.allOf(futures.toArray(new CompletableFuture[futures.size()])).get();
   }
+
+
 }

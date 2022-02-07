@@ -46,11 +46,6 @@ public abstract class AbstrantDevice implements IDevice {
   }
 
   @Override
-  public void setChannel(int channel) {
-    this.channel = channel;
-  }
-
-  @Override
   public boolean isOnOff() {
     return this.onOff;
   }
@@ -63,6 +58,11 @@ public abstract class AbstrantDevice implements IDevice {
   @Override
   public int getChannel() {
     return channel;
+  }
+
+  @Override
+  public void setChannel(int channel) {
+    this.channel = channel;
   }
 
 }

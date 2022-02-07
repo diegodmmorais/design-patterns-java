@@ -27,6 +27,10 @@ public final class LandAnimalFactory implements IAnimalFactory<TypeAnimalLand> {
     return instance;
   }
 
+  private static <T> boolean isaNull(T t) {
+    return Objects.isNull(t);
+  }
+
   @Override
   public IAnimal create(TypeAnimalLand type) {
     return switch (type) {
@@ -34,9 +38,5 @@ public final class LandAnimalFactory implements IAnimalFactory<TypeAnimalLand> {
       case COW -> new Cow();
       case DOG -> new Dog();
     };
-  }
-
-  private static <T> boolean isaNull(T t) {
-    return Objects.isNull(t);
   }
 }

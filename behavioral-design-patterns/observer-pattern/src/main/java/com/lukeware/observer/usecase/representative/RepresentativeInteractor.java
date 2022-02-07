@@ -4,7 +4,6 @@ import com.lukeware.observer.entity.action.ActionBuilder;
 import com.lukeware.observer.entity.action.TypeAction;
 import com.lukeware.observer.entity.representative.IRepresentative;
 import com.lukeware.observer.usecase.AbstractRuleInteractor;
-import com.lukeware.observer.usecase.RuleType;
 import com.lukeware.observer.usecase.rule.event.RuleEventManager;
 
 import java.util.LinkedHashSet;
@@ -34,7 +33,7 @@ final class RepresentativeInteractor extends AbstractRuleInteractor implements I
     if (Objects.nonNull(representative.identifierDocument())) {
       System.out.println("| Identifier document validated");
       actions().add(ActionBuilder.builder().action("VALIDATE_IDENTIFIER_DOCUMENT")
-                                 .type(TypeAction.GO_TO_AGENCY)
+                                 .type(TypeAction.REAPPROVED)
                                  .build());
       eventManager.notify(identifierProposal, this.actions());
     }

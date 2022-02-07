@@ -5,6 +5,8 @@ package com.lukeware.observer.usecase;
  */
 public enum FactoryType {
   COMPANY,
-  REPRESENTATIVE;
+  REPRESENTATIVE,
+  CHECKING_ACCOUNT;
+
 
 }

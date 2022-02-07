@@ -1,6 +1,7 @@
 package com.lukeware.observer.usecase;
 
 import com.lukeware.observer.entity.company.CompanyBuilder;
+import com.lukeware.observer.entity.proposal.ProposalBuilder;
 import com.lukeware.observer.entity.representative.RepresentativeBuilder;
 import com.lukeware.observer.usecase.rule.group.RuleGroupBuilder;
 import org.junit.jupiter.api.Assertions;
@@ -18,6 +19,7 @@ class IRuleRunnerTest {
   void ruleRunner() {
     final var motorFour = RuleGroupBuilder.builder().build();
 
+
     final var company = CompanyBuilder.builder().data("Informations").idenfierDocument("99.999.99/9999-99").build();
     final var representative = RepresentativeBuilder.builder()
                                                     .identifierDocument("999.999.999.99")
@@ -25,11 +27,14 @@ class IRuleRunnerTest {
                                                     .lastName("Dave")
                                                     .build();
 
+    final var proposal = ProposalBuilder.builder().comapny(company).representative(representative).build();
+
+
     final var companyFactory = AbstractFactoryProvider.getInstance().create(FactoryType.COMPANY);
     final var representativeFactory = AbstractFactoryProvider.getInstance().create(FactoryType.REPRESENTATIVE);
 
-    final var ruleCompany = (IRuleRunner) companyFactory.create("1234", company);
-    final var ruleRepresentative = (IRuleRunner) representativeFactory.create("1234", representative);
+    final var ruleCompany = (IRuleRunner) companyFactory.create(proposal);
+    final var ruleRepresentative = (IRuleRunner) representativeFactory.create(proposal);
 
     motorFour.add(ruleCompany);
     motorFour.add(ruleRepresentative);

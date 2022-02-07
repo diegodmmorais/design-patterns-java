@@ -9,6 +9,10 @@ import com.lukeware.bridge.entity.device.IDevice;
 final record RemoteInteractor(IDevice device) implements IRemote {
 
 
+  private static void print(IDevice device) {
+    device.printStatus();
+  }
+
   @Override
   public void power() {
     if (device.isOnOff()) {
@@ -41,9 +45,5 @@ final record RemoteInteractor(IDevice device) implements IRemote {
   public void channelUp() {
     device.setChannel(device.getChannel() + 1);
     print(device);
-  }
-
-  private static void print(IDevice device) {
-    device.printStatus();
   }
 }

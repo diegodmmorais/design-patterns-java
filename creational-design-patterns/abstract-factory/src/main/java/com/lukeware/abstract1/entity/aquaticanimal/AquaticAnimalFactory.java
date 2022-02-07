@@ -27,6 +27,10 @@ public final class AquaticAnimalFactory implements IAnimalFactory<TypeAnimalAqua
     return instance;
   }
 
+  private static <T> boolean isaNull(T t) {
+    return Objects.isNull(t);
+  }
+
   @Override
   public IAnimal create(TypeAnimalAquatic type) {
     return switch (type) {
@@ -34,9 +38,5 @@ public final class AquaticAnimalFactory implements IAnimalFactory<TypeAnimalAqua
       case FISH -> new Fish();
       case DOLPHIN -> new Dolphin();
     };
-  }
-
-  private static <T> boolean isaNull(T t) {
-    return Objects.isNull(t);
   }
 }

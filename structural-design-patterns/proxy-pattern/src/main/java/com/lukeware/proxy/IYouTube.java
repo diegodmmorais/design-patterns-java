@@ -1,7 +1,5 @@
 package com.lukeware.proxy;
 
-import java.util.Set;
-
 /**
  * @author Diego Morais
  */

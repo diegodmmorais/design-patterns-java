@@ -26,6 +26,10 @@ public final class AnimalFactory {
     return instance;
   }
 
+  private static <T> boolean isaNull(T t) {
+    return Objects.isNull(t);
+  }
+
   public IAnimal createDog() {
     return create(TypeAnimal.DOG);
   }
@@ -44,9 +48,5 @@ public final class AnimalFactory {
       case COW -> new Cow();
       case DOG -> new Dog();
     };
-  }
-
-  private static <T> boolean isaNull(T t) {
-    return Objects.isNull(t);
   }
 }

@@ -1,6 +1,6 @@
 package com.lukeware.observer.usecase.representative;
 
-import com.lukeware.observer.entity.representative.IRepresentative;
+import com.lukeware.observer.entity.proposal.IProposal;
 import com.lukeware.observer.usecase.IRuleFactory;
 
 import java.util.Objects;
@@ -8,7 +8,7 @@ import java.util.Objects;
 /**
  * @author diegomorais
  */
-public final class RepresentativeFactory implements IRuleFactory<IRepresentative, IRuleRepresentative> {
+public final class RepresentativeFactory implements IRuleFactory<IProposal, IRuleRepresentative> {
 
   private static RepresentativeFactory instance;
 
@@ -29,8 +29,8 @@ public final class RepresentativeFactory implements IRuleFactory<IRepresentative
   }
 
   @Override
-  public IRuleRepresentative create(String identifierProposal, IRepresentative representative) {
-    return new RepresentativeInteractor(identifierProposal, representative);
+  public IRuleRepresentative create(IProposal proposal) {
+    return new RepresentativeInteractor(proposal.identifierCode(), proposal.representative());
   }
 
 }

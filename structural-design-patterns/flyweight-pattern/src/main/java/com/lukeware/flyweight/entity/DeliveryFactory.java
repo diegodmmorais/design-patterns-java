@@ -11,8 +11,8 @@ import java.util.Objects;
  */
 public final class DeliveryFactory {
   private static DeliveryFactory instance;
-  private Map<String, IDeliveryFlyweight> locations;
   private final Delivery delivery;
+  private Map<String, IDeliveryFlyweight> locations;
 
   private DeliveryFactory() {
     super();

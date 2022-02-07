@@ -4,7 +4,6 @@ import com.lukeware.observer.entity.action.ActionBuilder;
 import com.lukeware.observer.entity.action.TypeAction;
 import com.lukeware.observer.entity.company.IComapny;
 import com.lukeware.observer.usecase.AbstractRuleInteractor;
-import com.lukeware.observer.usecase.RuleType;
 import com.lukeware.observer.usecase.rule.event.RuleEventManager;
 
 import java.util.LinkedHashSet;
@@ -33,7 +32,7 @@ final class CompanyInteractor extends AbstractRuleInteractor implements IRuleCom
     System.out.println("| Running rules company");
     if (Objects.nonNull(comapny.identifierDocument())) {
       System.out.println("| Identifier document validated");
-      actions().add(ActionBuilder.builder().action("VALIDATE_IDENTIFIER_DOCUMENT").type(TypeAction.APPROVED).build());
+      actions().add(ActionBuilder.builder().action("VALIDATE_IDENTIFIER_DOCUMENT").type(TypeAction.ERROR).build());
       eventManager.notify(identifierProposal, this.actions());
     }
     System.out.println("| " + comapny);

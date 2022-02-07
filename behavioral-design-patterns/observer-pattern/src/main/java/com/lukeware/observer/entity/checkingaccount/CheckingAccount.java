@@ -5,5 +5,5 @@ import com.lukeware.observer.entity.accountowner.IAccountOwner;
 /**
  * @author Diego Morais
  */
-final record CheckingAccount(String agency, String number, IAccountOwner accountOwner) implements ICheckingAccount{
+final record CheckingAccount(String agency, String number, IAccountOwner accountOwner) implements ICheckingAccount {
 }

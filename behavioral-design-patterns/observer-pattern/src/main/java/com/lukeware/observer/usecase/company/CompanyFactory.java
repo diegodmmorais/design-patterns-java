@@ -1,6 +1,6 @@
 package com.lukeware.observer.usecase.company;
 
-import com.lukeware.observer.entity.company.IComapny;
+import com.lukeware.observer.entity.proposal.IProposal;
 import com.lukeware.observer.usecase.IRuleFactory;
 
 import java.util.Objects;
@@ -8,7 +8,7 @@ import java.util.Objects;
 /**
  * @author diegomorais
  */
-public final class CompanyFactory implements IRuleFactory<IComapny, IRuleCompany> {
+public final class CompanyFactory implements IRuleFactory<IProposal, IRuleCompany> {
 
   private static CompanyFactory instance;
 
@@ -28,8 +28,8 @@ public final class CompanyFactory implements IRuleFactory<IComapny, IRuleCompany
   }
 
   @Override
-  public IRuleCompany create(String identifierProposal, IComapny comapny) {
-    return new CompanyInteractor(identifierProposal, comapny);
+  public IRuleCompany create(IProposal proposal) {
+    return new CompanyInteractor(proposal.identifierCode(), proposal.comapny());
   }
 
 }

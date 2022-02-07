@@ -5,6 +5,8 @@ package com.lukeware.abstract1;
  */
 public interface ILengthAdapter {
   IMeasurement getMeter();
+
   IMeasurement getKilometer();
+
   IMeasurement getCentimeter();
 }

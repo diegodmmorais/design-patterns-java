@@ -22,9 +22,9 @@ class ScheduleTest {
     final var schedule2 = schedule1.clone();
     final var schedule3 = schedule1.clone();
 
-    Assertions.assertDoesNotThrow(()-> schedule1.run());
-    Assertions.assertDoesNotThrow(()-> schedule2.run());
-    Assertions.assertDoesNotThrow(()-> schedule3.run());
+    Assertions.assertDoesNotThrow(() -> schedule1.run());
+    Assertions.assertDoesNotThrow(() -> schedule2.run());
+    Assertions.assertDoesNotThrow(() -> schedule3.run());
 
   }
 

@@ -1,7 +1,6 @@
 package com.lukeware.observer.usecase.rule.event;
 
 import com.lukeware.observer.entity.action.IAction;
-import com.lukeware.observer.usecase.RuleType;
 import com.lukeware.observer.usecase.rule.RuleDsRequest;
 
 import java.util.LinkedHashSet;
@@ -43,10 +42,11 @@ public final class RuleEventManager {
     if (optListener.isPresent()) {
       listeners.remove(optListener.get());
     }
+    System.gc();
   }
 
   public void notify(String identifierCode, Set<IAction> actions) {
-    listeners.stream().filter(item-> item.identifierCode().equals(identifierCode))
+    listeners.stream().filter(item -> item.identifierCode().equals(identifierCode))
              .forEach(rule -> rule.eventListenRules().update(actions));
   }
 

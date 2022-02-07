@@ -10,6 +10,10 @@ final record YouTubeProxy(IYouTube youTube) implements IYouTube {
 
   private static Set<String> urls = new LinkedHashSet<>();
 
+  public static Set<String> urls() {
+    return urls;
+  }
+
   @Override
   public String download(String url) {
     final var optUrls = urls.stream().filter(it -> it.equals(url)).findFirst();
@@ -20,9 +24,5 @@ final record YouTubeProxy(IYouTube youTube) implements IYouTube {
       urls.add(urlNew);
       return urlNew;
     }
-  }
-
-  public static Set<String> urls() {
-    return urls;
   }
 }

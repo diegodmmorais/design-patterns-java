@@ -3,7 +3,8 @@ package com.lukeware.factory;
 
 /**
  * Creational Design Patterns
- *  - Factory Pattern
+ * - Factory Pattern
+ *
  * @author Diego Morais
  */
 public interface IAnimal {
