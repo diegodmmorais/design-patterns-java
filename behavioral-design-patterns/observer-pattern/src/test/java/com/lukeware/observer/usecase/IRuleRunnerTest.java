@@ -2,7 +2,7 @@ package com.lukeware.observer.usecase;
 
 import com.lukeware.observer.entity.company.CompanyBuilder;
 import com.lukeware.observer.entity.representative.RepresentativeBuilder;
-import com.lukeware.observer.usecase.rule.RuleGroupBuilder;
+import com.lukeware.observer.usecase.rule.group.RuleGroupBuilder;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

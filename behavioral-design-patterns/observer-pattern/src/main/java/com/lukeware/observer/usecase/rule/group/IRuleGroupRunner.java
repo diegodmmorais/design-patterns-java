@@ -1,4 +1,4 @@
-package com.lukeware.observer.usecase.rule;
+package com.lukeware.observer.usecase.rule.group;
 
 import com.lukeware.observer.usecase.IRuleRunner;
 
@@ -10,4 +10,6 @@ public interface IRuleGroupRunner extends IRuleRunner {
   void add(IRuleRunner rule);
 
   void remove(IRuleRunner rule);
+
+  void executeMulti();
 }

@@ -1,4 +1,4 @@
-package com.lukeware.observer.usecase.rule;
+package com.lukeware.observer.usecase.rule.group;
 
 /**
  * @author Diego Morais
