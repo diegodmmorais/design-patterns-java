@@ -45,16 +45,6 @@ final class RuleInteractor implements IRuleInteractor, EventListenRules {
     ruleMotoFour.executeMulti();
     eventManager.unsubscribe(identifierProposal);
 
-    final var reaprover = getAction(TypeAction.REAPPROVED);
-    if (!reaprover.isEmpty()) {
-      return reaprover;
-    }
-
-    final var goToAgency = getAction(TypeAction.GO_TO_AGENCY);
-    if (!goToAgency.isEmpty()) {
-      return goToAgency;
-    }
-
     return getAction(TypeAction.APPROVED);
   }
 

@@ -32,7 +32,7 @@ final class CompanyInteractor extends AbstractRuleInteractor implements IRuleCom
     System.out.println("| Running rules company");
     if (Objects.nonNull(comapny.identifierDocument())) {
       System.out.println("| Identifier document validated");
-      actions().add(ActionBuilder.builder().action("VALIDATE_IDENTIFIER_DOCUMENT").type(TypeAction.ERROR).build());
+      actions().add(ActionBuilder.builder().action("VALIDATE_IDENTIFIER_DOCUMENT").type(TypeAction.APPROVED).build());
       eventManager.notify(identifierProposal, this.actions());
     }
     System.out.println("| " + comapny);

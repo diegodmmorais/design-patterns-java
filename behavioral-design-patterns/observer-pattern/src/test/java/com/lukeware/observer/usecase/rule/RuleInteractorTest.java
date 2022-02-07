@@ -52,7 +52,7 @@ class RuleInteractorTest {
 
     Assertions.assertNotNull(action);
     Assertions.assertFalse(action.isEmpty());
-    Assertions.assertEquals(TypeAction.REAPPROVED, action.stream().findFirst().get().type());
+    Assertions.assertEquals(TypeAction.APPROVED, action.stream().findFirst().get().type());
 
   }
 
