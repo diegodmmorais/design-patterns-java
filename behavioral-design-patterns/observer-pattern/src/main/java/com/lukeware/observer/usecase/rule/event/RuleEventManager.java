@@ -35,7 +35,7 @@ public final class RuleEventManager {
     listeners.add(new RuleDsRequest(identifierCode, eventList));
   }
 
-  public void unSubscribe(String identifierCode) {
+  public void unsubscribe(String identifierCode) {
     final var optListener = listeners.stream()
                                      .filter(event -> event.identifierCode().equals(identifierCode))
                                      .findFirst();
