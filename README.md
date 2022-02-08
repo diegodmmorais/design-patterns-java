@@ -22,10 +22,10 @@
 ### Behavioral Design Patterns
 
 - :white_check_mark: [Observer Pattern](https://refactoring.guru/design-patterns/observer)
+- :white_check_mark: [Strategy Pattern](https://refactoring.guru/design-patterns/strategy)
 - :white_large_square: [Template Method Pattern]()
 - :white_large_square: [Mediator Pattern]()
 - :white_large_square: [Chain of Responsibility Pattern]()
-- :white_large_square: [Strategy Pattern]()
 - :white_large_square: [Command Pattern]()
 - :white_large_square: [State Pattern]()
 - :white_large_square: [Visitor Pattern]()
