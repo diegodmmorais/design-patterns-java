@@ -2,8 +2,7 @@
 
 ### Creational Design Patterns
 
-- :
-  white_check_mark: [Singleton Pattern](https://www.journaldev.com/1377/java-singleton-design-pattern-best-practices-examples)
+- :white_check_mark: [Singleton Pattern](https://www.journaldev.com/1377/java-singleton-design-pattern-best-practices-examples)
 - :white_check_mark: [Factory Pattern](https://www.journaldev.com/1392/factory-design-pattern-in-java)
 - :white_check_mark: [Abstract Factory Pattern](https://www.journaldev.com/1418/abstract-factory-design-pattern-in-java)
 - :white_check_mark: [Builder Pattern](https://www.journaldev.com/1425/builder-design-pattern-in-java)
