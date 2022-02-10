@@ -22,7 +22,41 @@ class RuleInteractorTest {
   @DisplayName("Run business rules four")
   void runBusinessRulesFour() throws ExecutionException, InterruptedException {
 
-    final var ruleInteractor = new RuleInteractor();
+    final var comapny = CompanyBuilder.builder()
+                                      .data("data")
+                                      .idenfierDocument("99.999.99/9999-99")
+                                      .build();
+
+    final var representative = RepresentativeBuilder.builder()
+                                                    .identifierDocument("999.999.999-99")
+                                                    .firstName("Jonh")
+                                                    .lastName("Dave")
+                                                    .build();
+
+    final var checkingAccount = CheckingAccountBuilder.builder()
+                                                      .accountOwner(representative)
+                                                      .agency("0033")
+                                                      .number("006658898")
+                                                      .build();
+
+    final var proposal = ProposalBuilder.builder()
+                                        .identifierCode("99991111222333")
+                                        .comapny(comapny)
+                                        .representative(representative)
+                                        .checkingAccoun(checkingAccount)
+                                        .build();
+
+    final var action = new RuleInteractor().runBusinessRulesFour(proposal);
+
+    Assertions.assertNotNull(action);
+    Assertions.assertFalse(action.isEmpty());
+    Assertions.assertEquals(TypeAction.APPROVED, action.stream().findFirst().get().type());
+
+  }
+
+  @Test
+  @DisplayName("Run business rules four")
+  void runBusinessRulesFour2() throws ExecutionException, InterruptedException {
 
     final var comapny = CompanyBuilder.builder()
                                       .data("data")
@@ -48,11 +82,23 @@ class RuleInteractorTest {
                                         .checkingAccoun(checkingAccount)
                                         .build();
 
-    final var action = ruleInteractor.runBusinessRulesFour(proposal);
+    final var proposal2 = ProposalBuilder.builder()
+                                        .identifierCode("99991111222444")
+                                        .comapny(comapny)
+                                        .representative(representative)
+                                        .checkingAccoun(checkingAccount)
+                                        .build();
+
+    final var action = new RuleInteractor().runBusinessRulesFour(proposal);
+    final var action2 = new RuleInteractor().runBusinessRulesFour(proposal2);
 
     Assertions.assertNotNull(action);
     Assertions.assertFalse(action.isEmpty());
     Assertions.assertEquals(TypeAction.APPROVED, action.stream().findFirst().get().type());
+
+    Assertions.assertNotNull(action2);
+    Assertions.assertFalse(action2.isEmpty());
+    Assertions.assertEquals(TypeAction.APPROVED, action2.stream().findFirst().get().type());
 
   }
 

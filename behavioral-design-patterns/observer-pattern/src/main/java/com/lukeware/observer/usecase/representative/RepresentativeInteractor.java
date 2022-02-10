@@ -32,7 +32,8 @@ final class RepresentativeInteractor extends AbstractRuleInteractor implements I
     System.out.println("| Running rules representative");
     if (Objects.nonNull(representative.identifierDocument())) {
       System.out.println("| Identifier document validated");
-      actions().add(ActionBuilder.builder().action("VALIDATE_IDENTIFIER_DOCUMENT")
+      actions().add(ActionBuilder.builder()
+                                 .action("VALIDATE_IDENTIFIER_DOCUMENT_REPRESENTATIVE " + this.identifierProposal)
                                  .type(TypeAction.APPROVED)
                                  .build());
       eventManager.notify(identifierProposal, this.actions());

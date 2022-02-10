@@ -33,7 +33,9 @@ final class CheckingAccountInteractor extends AbstractRuleInteractor implements 
     System.out.println("| Running rules checking account");
     if (Objects.nonNull(checkingAccount.agency())) {
       System.out.println("| Agency validated");
-      actions().add(ActionBuilder.builder().action("VALIDATE_AGENCY").type(TypeAction.APPROVED).build());
+      actions().add(ActionBuilder.builder()
+                                 .action("VALIDATE_AGENCY " + this.identifierProposal)
+                                 .type(TypeAction.APPROVED).build());
       eventManager.notify(identifierProposal, this.actions());
     }
     System.out.println("| " + checkingAccount);

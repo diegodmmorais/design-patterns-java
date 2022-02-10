@@ -47,7 +47,8 @@ public final class RuleEventManager {
 
   public void notify(String identifierCode, Set<IAction> actions) {
     listeners.stream().filter(item -> item.identifierCode().equals(identifierCode))
-             .forEach(rule -> rule.eventListenRules().update(actions));
+             .findFirst()
+             .ifPresent(rule -> rule.eventListenRules().update(actions));
   }
 
 }
