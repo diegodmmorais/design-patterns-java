@@ -1,8 +1,8 @@
 package com.lukeware.templatemethod.usecase;
 
-import com.lukeware.templatemethod.usecase.shirts.ShirtsBuilder;
-import com.lukeware.templatemethod.usecase.shoes.ShoesBuilder;
-import com.lukeware.templatemethod.usecase.sneakers.SneakersBuilder;
+import com.lukeware.templatemethod.usecase.blouse.BlouseBuilder;
+import com.lukeware.templatemethod.usecase.shirt.ShirtBuilder;
+import com.lukeware.templatemethod.usecase.tshirt.TShirtBuilder;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -16,23 +16,23 @@ class ConfectionTest {
   @Test
   @DisplayName("Confection shirt")
   void confectionShirt() {
-    final var shirts = ShirtsBuilder.builder().build();
+    final var shirts = ShirtBuilder.builder().build();
     Assertions.assertDoesNotThrow(() -> shirts.make());
   }
 
   @Test
-  @DisplayName("Confection shoes")
+  @DisplayName("Confection tshirt")
   void confectionShoes() {
-    final var shoes = ShoesBuilder.builder().build();
-    Assertions.assertDoesNotThrow(() -> shoes.make());
+    final var tshirt = TShirtBuilder.builder().build();
+    Assertions.assertDoesNotThrow(() -> tshirt.make());
   }
 
 
   @Test
-  @DisplayName("Confection sneakers")
+  @DisplayName("Confection blouse")
   void confectionSneakers() {
-    final var sneakers = SneakersBuilder.builder().build();
-    Assertions.assertDoesNotThrow(() -> sneakers.make());
+    final var blouse = BlouseBuilder.builder().build();
+    Assertions.assertDoesNotThrow(() -> blouse.make());
   }
 
 }

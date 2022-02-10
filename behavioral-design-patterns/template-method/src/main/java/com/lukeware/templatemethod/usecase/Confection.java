@@ -9,12 +9,8 @@ public abstract class Confection implements IConfection {
     System.out.println("-------------------------------------");
     this.cut();
     this.toSew();
-    if (isIron()) {
-      this.iron();
-    }
-    if (this.isWash()) {
-      this.wash();
-    }
+    this.iron();
+    this.wash();
     this.label();
     this.send();
     System.out.println("-------------------------------------");
@@ -22,11 +18,7 @@ public abstract class Confection implements IConfection {
 
   protected abstract void toSew();
 
-  protected abstract boolean isIron();
-
   protected abstract void iron();
-
-  protected abstract boolean isWash();
 
   protected abstract void wash();
 

@@ -1,11 +1,11 @@
-package com.lukeware.templatemethod.usecase.shirts;
+package com.lukeware.templatemethod.usecase.shirt;
 
 import com.lukeware.templatemethod.usecase.Confection;
 
 /**
  * @author Diego Morais
  */
-final class Shirts extends Confection implements IShirts {
+final class Shirt extends Confection implements IShirt {
 
   @Override
   protected void toSew() {
@@ -13,20 +13,10 @@ final class Shirts extends Confection implements IShirts {
   }
 
   @Override
-  protected boolean isIron() {
-    return true;
-  }
-
-  @Override
   protected void iron() {
     System.out.println("| ironing the shirt");
   }
-
-  @Override
-  protected boolean isWash() {
-    return true;
-  }
-
+  
   @Override
   protected void wash() {
     System.out.println("| washing the shirt");
