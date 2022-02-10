@@ -22,7 +22,7 @@
 
 - :white_check_mark: [Observer Pattern](https://refactoring.guru/design-patterns/observer)
 - :white_check_mark: [Strategy Pattern](https://refactoring.guru/design-patterns/strategy)
-- :white_large_square: [Template Method Pattern]()
+- :white_check_mark: [Template Method Pattern](https://refactoring.guru/pt-br/design-patterns/template-method)
 - :white_large_square: [Mediator Pattern]()
 - :white_large_square: [Chain of Responsibility Pattern]()
 - :white_large_square: [Command Pattern]()
